@@ -14,8 +14,11 @@ openMVG_main_IncrementalSfM --OR-- openMVG_main_GlobalSfM
 Completing this pipeline, we will obtain `sfm_data.bin`, which could be named differently according to your running command. To produce the readable results, we will need to excecute `openMVG_main_ConvertSfM_DataFormat`. The command can be executed like below:<br>
 
 ```
-$OPEN_MVG_BUILD/Linux-x86_64-RELEASE/openMVG_main_ConvertSfM_DataFormat -i sfm_data.bin -o sfm_data.json -V -I -E
+cd $OPEN_MVG_BUILD/Linux-x86_64-RELEASE
+openMVG_main_ConvertSfM_DataFormat -i sfm_data.bin -o sfm_data.json -V -I -E
+
 ```
+
 <br>
 where `sfm_data.bin` is the SfM binary result produced by OpenMVG which will be converted to a json file named as `sfm_data.json` and `-V -I -E` are entered such that views, intrinsics and camera poses (extrinsics), in respective order, will be exported. 
 <br>
