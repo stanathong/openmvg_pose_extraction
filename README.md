@@ -17,6 +17,6 @@ Completing this pipeline, we will obtain `sfm_data.bin`, which could be named di
 $OPEN_MVG_BUILD/Linux-x86_64-RELEASE/openMVG_main_ConvertSfM_DataFormat -i sfm_data.bin -o sfm_data.json -V -I -E
 ```
 <br>
-where `sfm_data.bin` is the SfM binary result produced by OpenMVG which will be converted to a json file named as `sfm_data.json` and -V -I -E are entered such that views, intrinsics and camera poses (extrinsics) will be exported. <br>
+where `sfm_data.bin` is the SfM binary result produced by OpenMVG which will be converted to a json file named as `sfm_data.json` and `-V -I -E` are entered such that views, intrinsics and camera poses (extrinsics), in respective order, will be exported. <br>
 
 In this repository, a utility to extract camera pose `[R|t]` for each image and the camera intrinsics are extracted and stored as csv and txt files for further processing.<br>
