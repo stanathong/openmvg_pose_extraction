@@ -30,3 +30,5 @@ where _sfm_data.bin_ is the SfM binary result produced by OpenMVG which will be 
 # openmvg_pose_extraction
 
 In this repository, a utility to extract camera pose `[R|t]` for each image and the camera intrinsics are extracted and stored as csv and txt files for further processing.<br>
+
+To be updated...
