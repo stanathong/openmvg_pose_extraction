@@ -46,5 +46,5 @@ And running on __Linux__ by using command <br>
 openmvg_pose_extraction /home/usr/source/OpenMVG_Results/sfm_data.json
 
 ```
-Notice the slash (that is `\\` for Windows and `/` for Linux) as the difference between the two operating system as the program executes a command to create a folder named `RT` under the path where the file `sfm_data.json` is located.
+Notice the slash (that is `\\` for Windows and `/` for Linux) as the difference between the two operating systems. This is because the program will have to execute the `mkdir PATH\\RT` or `mkdir PATH/RT` command to create a folder named `RT` under the path where the file `sfm_data.json` is located.
 
