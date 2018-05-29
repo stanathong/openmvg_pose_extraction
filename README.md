@@ -31,4 +31,20 @@ where _sfm_data.bin_ is the SfM binary result produced by OpenMVG which will be 
 
 In this repository, a utility to extract camera pose `[R|t]` for each image and the camera intrinsics are extracted and stored as csv and txt files for further processing.<br>
 
-To be updated...
+### Development
+The code is developed in C++ using MS Visual Studio 2012 BUT there is no reference to any MFC specific functions. It uses [RapidJson](http://rapidjson.org/) to read the content from the json file. However, downloading RapidJson is not required as all the necessary files are already included in this project under the folder "external".<br>
+
+### Running Command
+After building, it can be run on __Windows__ by using command
+`openmvg_pose_extraction FULL_PATH_TO_SFM_DATA.json`. For example, <br>
+```
+openmvg_pose_extraction D:\\OpenMVG_Results\\sfm_data.json
+
+```
+And running on __Linux__ by using command <br>
+```
+openmvg_pose_extraction /home/usr/source/OpenMVG_Results/sfm_data.json
+
+```
+Notice the slash (that is `\\` for Windows and `/` for Linux) as the difference between the two operating system as the program executes a command to create a folder named `RT` under the path where the file `sfm_data.json` is located.
+
