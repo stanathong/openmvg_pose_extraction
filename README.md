@@ -48,3 +48,5 @@ openmvg_pose_extraction /home/usr/source/OpenMVG_Results/sfm_data.json
 ```
 Notice the slash (that is `\\` for Windows and `/` for Linux) as the difference between the two operating systems. This is because the program will have to execute the `mkdir PATH\\RT` or `mkdir PATH/RT` command to create a folder named `RT` under the path where the file `sfm_data.json` is located.
 
+### Output
+An `RT` folder is created under `PATH` where sfm_data.json is located. The folder contains text files named as "<Image_file_name>.txt" each of which stores a 3x4 matrix corresponding to `[R|t]`. It also produces 2 CSV files: `intrinsics.csv` and `poses.csv`. `intrinsics.csv` have the intrinsics parameters for each camera specified by intrinsics_id. `poses.csv` contains camera poses.
