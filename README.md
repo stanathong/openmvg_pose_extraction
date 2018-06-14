@@ -12,7 +12,7 @@ openMVG_main_IncrementalSfM --OR-- openMVG_main_GlobalSfM
 
 ```
 <br>
-Completing this pipeline, we will obtain `sfm_data.bin`, which could be named differently according to your running command. To produce the readable results, we will need to excecute `openMVG_main_ConvertSfM_DataFormat`. The command can be executed like below:<br>
+Completing this pipeline, we will obtain `sfm_data.bin` which could be named differently according to your running command. To produce the readable results, we will need to excecute `openMVG_main_ConvertSfM_DataFormat`. The command can be executed like below:<br><br>
 
 ```
 cd $OPEN_MVG_BUILD/Linux-x86_64-RELEASE
