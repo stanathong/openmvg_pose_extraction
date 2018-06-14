@@ -77,11 +77,20 @@ bool CReconstructionStructure::readReconstruction()
 				const rapidjson::Value& camera_data = (*it)["value"]["ptr_wrapper"]["data"];
 
 				// Construct shot with "views" content
-				SHOT shot(	camera_data["filename"].GetString(), 
-							camera_data["center"][0].GetDouble(),
-							camera_data["center"][1].GetDouble(),
-							camera_data["center"][2].GetDouble(),
-							camera_data["id_intrinsic"].GetInt() );
+				SHOT shot;
+				if (camera_data.HasMember("center")) // GPS exif is read
+				{
+					shot = SHOT(camera_data["filename"].GetString(), 
+								camera_data["center"][0].GetDouble(),
+								camera_data["center"][1].GetDouble(),
+								camera_data["center"][2].GetDouble(),
+								camera_data["id_intrinsic"].GetInt());
+				}
+				else
+				{
+					shot.image_name = camera_data["filename"].GetString();
+					shot.intrinsics_id = camera_data["id_intrinsic"].GetInt();
+				}
 				
 				int id_pose = camera_data["id_pose"].GetInt();
 				
